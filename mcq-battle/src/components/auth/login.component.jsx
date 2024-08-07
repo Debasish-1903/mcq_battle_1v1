@@ -19,6 +19,7 @@ const LoginComponent = () => {
       AuthCookies.SetRefreshToken(response.data.refresh);
       setIsLoggedInUser(true);
       toast.success("Login successful!");
+      console.log("logged in ");
       navigate(Urls.Home());
     } catch (err) {
       console.log(err);
