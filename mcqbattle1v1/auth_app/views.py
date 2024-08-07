@@ -56,7 +56,7 @@ class LoginView(APIView):
              password=serializer.validated_data['password']
              user=User.objects.filter(email=email).first()
              if user is None:
-                 return Response({"error":"User not found"},status=status.HTTP_404_NOT_FOUND)
+                 return Response({"error":"User not found"},status=status.HTTP_403_FORBIDDEN)
              
              if not user.check_password(password):
                  return Response({"error":"Invalid password"},status=status.HTTP_400_BAD_REQUEST)
