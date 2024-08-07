@@ -1,12 +1,15 @@
 import axios from "axios";
 
-// Create an instance of axios with default configuration
-const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000/api", // Replace with your API base URL
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+import axiosInstance from "../axios-instance";
+//Create an instance of axios with default configuration
+
+// const axiosInstance = axios.create({
+//   baseURL: "http://localhost:8000/", // Replace with your API base URL
+//    //baseURL: "BASE_URL",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
 
 /**
  * Fetch a specific MCQ by ID.
@@ -22,7 +25,7 @@ export const GetMCQ = async (id) => {
  * @returns {Promise} - Axios response promise with the list of all MCQs.
  */
 export const GetMCQs = async () => {
-  return await axiosInstance.get(`/mcqs`);
+  return await axiosInstance.get(`/mcqs/`);
 };
 
 /**
@@ -31,7 +34,7 @@ export const GetMCQs = async () => {
  * @returns {Promise} - Axios response promise with the created MCQ data.
  */
 export const CreateMcq = async (data) => {
-  return await axiosInstance.post(`/mcqs`, data);
+  return await axiosInstance.post(`/mcqs/`, data);
 };
 
 /**

@@ -85,6 +85,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+ 
 
 
 # Password validation
@@ -122,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+APPEND_SLASH=False
 
 # settings.py
 
@@ -139,6 +141,9 @@ REST_FRAMEWORK = {
 }
 
 
+
+
+
 AUTH_USER_MODEL = 'auth_app.User'
 
 
@@ -147,3 +152,5 @@ AUTH_USER_MODEL = 'auth_app.User'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
