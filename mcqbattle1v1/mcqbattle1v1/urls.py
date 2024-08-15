@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from auth_app.views import RegisterView,LoginView,ProtectedView,GetView
-from mcqs.views import McqListCreateView,McqRetrieveUpdateDestroyView
+from mcqs.views import McqListCreateView,McqRetrieveUpdateDestroyView ,GameListCreateView,GameRetrieveUpdateDestroyView
 
 urlpatterns = [
     
@@ -29,7 +29,8 @@ urlpatterns = [
     path('protected/', ProtectedView.as_view(), name='protected'),
     path('get/', GetView.as_view(), name='get'),
     path('mcqs/',McqListCreateView.as_view(),name='mcq-list-create'),
-    path('mcqs/<uuid:pk>',McqRetrieveUpdateDestroyView.as_view(),name='mcq-detail')
-
+    path('mcqs/<uuid:pk>',McqRetrieveUpdateDestroyView.as_view(),name='mcq-detail'),
+    path('games/', GameListCreateView.as_view(), name='game-list-create'),
+    path('games/<uuid:pk>/', GameRetrieveUpdateDestroyView.as_view(), name='game-detail'),
 
 ]
