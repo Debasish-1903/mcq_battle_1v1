@@ -1,5 +1,8 @@
 # Ignore Python bytecode
-**/__pycache__
-*.sqlite3
+__pycache__/
+*mcqs
+db.sqlite3
+
 *.sqlite
 *.db
+*game
