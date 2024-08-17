@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import MCQs, Game
+from .models import MCQs
 from django.contrib.auth.models import User
 
 # Serializer for individual options in MCQs
@@ -34,7 +34,7 @@ class McqSerializer(serializers.Serializer):
         representation['options'] = instance.options  # JSONField is already a list/dict
         return representation
 
-# Serializer for User
+'''# Serializer for User
 class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     email=serializers.EmailField()
@@ -68,4 +68,4 @@ class GameSerializer(serializers.Serializer):
         instance.started_at = validated_data.get('started_at', instance.started_at)
         instance.completed_at = validated_data.get('completed_at', instance.completed_at)
         instance.save()
-        return instance
+        return instance '''
