@@ -16,7 +16,7 @@ class MCQs(models.Model):
 
 
 
-class Game(models.Model):
+'''class Game(models.Model):
     GAME_STATUS_CHOICES = [
         ('waiting', 'Waiting'),
         ('active', 'Active'),
@@ -37,4 +37,4 @@ class Game(models.Model):
     completed_at = models.DateTimeField(null=True, blank=True)
 
 def __str__(self):
-    return f"Game {self.id} - {self.title}"
+    return f"Game {self.id} - {self.title}"'''

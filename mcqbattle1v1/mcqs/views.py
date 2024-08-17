@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
-from .serializer import McqSerializer,GameSerializer
+from .serializer import McqSerializer
 from .models import MCQs
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Game
+
 
 
 # Create your views here.
@@ -81,7 +81,7 @@ class McqRetrieveUpdateDestroyView(APIView):
              return Response(status=status.HTTP_204_NO_CONTENT)
        
 
-
+'''
 class GameListCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -131,4 +131,4 @@ class GameRetrieveUpdateDestroyView(APIView):
           if game is None:
                return Response(status=status.HTTP_404_NOT_FOUND)
           game.delete()
-          return Response(status=status.HTTP_204_NO_CONTENT)
+          return Response(status=status.HTTP_204_NO_CONTENT) '''
