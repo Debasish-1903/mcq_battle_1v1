@@ -3,6 +3,5 @@ __pycache__/
 *mcqs
 db.sqlite3
 
-*.sqlite
+
 *.db
-*game
