@@ -1,0 +1,14 @@
+
+
+
+
+{% block content %}
+<h2>Available Games</h2>
+<ul>
+    {% for game in available_games %}
+    <li>
+        {{ game.name }} - <a href="{% url 'join-game' game.id %}">Join Game</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+
+
+
+{% block content %}
+<h2>{{ game.name }}</h2>
+<p>Status: {{ game.status }}</p>
+{% if user in game.participants.all %}
+<p>You have joined this game.</p>
+{% else %}
+<p>You are not a participant in this game.</p>
+{% endif %}
+{% endblock %}
